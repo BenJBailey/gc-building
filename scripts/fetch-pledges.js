@@ -1,8 +1,6 @@
 // scripts/fetch.js
 import fs from "fs";
 import fetch from "node-fetch"; // node18+ has fetch built-in, but this works too
-import dotenv from "dotenv"; // if using ESM
-dotenv.config();
 
 const API_URL = `https://api.planningcenteronline.com/giving/v2/pledge_campaigns/${process.env.PCO_CAMPAIGN_ID}`;
 
