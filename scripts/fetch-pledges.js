@@ -4,15 +4,12 @@ import fetch from "node-fetch"; // node18+ has fetch built-in, but this works to
 import dotenv from "dotenv"; // if using ESM
 dotenv.config();
 
-const API_URL =
-  "https://api.planningcenteronline.com/giving/v2/pledge_campaigns/" +
-  process.env.CAMPAIGN_ID;
+const API_URL = `https://api.planningcenteronline.com/giving/v2/pledge_campaigns/${process.env.PCO_CAMPAIGN_ID}`;
 
 async function main() {
   const credentials = Buffer.from(
-    `${process.env.PLANNING_CENTER_CLIENT_ID}:${process.env.PLANNING_CENTER_CLIENT_SECRET}`
+    `${process.env.PCO_CLIENT_ID}:${process.env.PCO_CLIENT_SECRET}`
   ).toString("base64");
-  console.log("creds", credentials, process.env.PLANNING_CENTER_CLIENT_ID);
   const res = await fetch(API_URL, {
     headers: {
       Authorization: `Basic ${credentials}`,
