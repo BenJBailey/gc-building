@@ -27,7 +27,7 @@ jobs:
           PCO_CLIENT_ID: ${{ secrets.PCO_CLIENT_ID }}
           PCO_CLIENT_SECRET: ${{ secrets.PCO_CLIENT_SECRET }}
           PCO_CAMPAIGN_ID: ${{ secrets.PCO_CAMPAIGN_ID }}
-        run: node scripts/fetch.js
+        run: node scripts/fetch-pledges.js
 
       - name: Commit & push if changed
         run: |
