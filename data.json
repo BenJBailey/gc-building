@@ -24,7 +24,7 @@
       }
     },
     "links": {
-      "fund": "https://api.planningcenteronline.com/giving/v2/funds/463199",
+      "fund": "https://api.planningcenteronline.com/giving/v2/pledge_campaigns/17089/fund",
       "pledges": "https://api.planningcenteronline.com/giving/v2/pledge_campaigns/17089/pledges",
       "self": "https://api.planningcenteronline.com/giving/v2/pledge_campaigns/17089"
     }
